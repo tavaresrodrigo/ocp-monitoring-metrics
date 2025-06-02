@@ -1,30 +1,43 @@
-# Azure Red Hat OpenShift (ARO) 4.18 - Monitoring & Metrics
+# OpenShift 4.18 on Azure (ARO) - Monitoring & Metrics Workshop
 
-Welcome to the Azure Red Hat OpenShift (ARO) 4.18 Monitoring & Metrics workshop!
+Welcome to this workshop on exploring the monitoring and metrics capabilities of OpenShift 4.18 on Azure (ARO).
 
-This workshop will guide you through deploying sample applications and utilizing the built-in monitoring and metrics features within an Azure Red Hat OpenShift (ARO) 4.18 cluster.
+This 2-hour workshop will guide you through understanding and utilizing the built-in monitoring stack within your ARO cluster. We will focus on how to access, interpret, and leverage the metrics provided by OpenShift for both cluster and application monitoring.
 
-**Workshop Goals:**
-
-* Learn about OpenShift's built-in monitoring stack.
-* Explore how to enable and configure monitoring for user-defined projects.
-* Deploy sample applications that expose metrics.
-* Visualize application and cluster metrics using the OpenShift console.
-* Understand how to query metrics using PromQL.
-* Explore creating custom dashboards and alerts.
-
+**Target Audience:** Developers, SREs, and anyone interested in understanding OpenShift monitoring fundamentals.
 **Prerequisites:**
+* An existing Azure Red Hat OpenShift (ARO) 4.18 cluster.
+* `oc` (OpenShift CLI) tool installed and configured to access your ARO cluster.
+* Kubeconfig file for your ARO cluster.
+* A modern web browser.
 
-Please ensure you have met all prerequisites listed in the [prerequisites.md](./prerequisites.md) file before starting the workshop.
+**Workshop Modules:**
 
-**Workshop Sections:**
+1.  **[Introduction to OpenShift Monitoring](./01-Introduction.md)** (15 minutes)
+    * Overview of the built-in monitoring stack.
+    * Key components: Prometheus & Grafana.
+    * The role of the Cluster Monitoring Operator.
+2.  **[Accessing Monitoring Dashboards](./02-Accessing-Dashboards.md)** (25 minutes)
+    * Navigating to the OpenShift Web Console.
+    * Accessing Grafana dashboards.
+    * Brief tour of the Prometheus UI.
+3.  **[Exploring Cluster Metrics](./03-Cluster-Metrics.md)** 
+    * Understanding key cluster-level metrics.
+    * Using default Grafana dashboards for cluster overview.
+    * Identifying resource utilization (CPU, Memory, Storage).
+4.  **[Monitoring Application Metrics](./04-Application-Metrics.md)**
+    * Understanding how applications expose metrics.
+    * Deploying a sample application that exposes metrics.
+    * Viewing application-specific metrics in Grafana/Prometheus.
+5.  **[Wrap-up and Next Steps](./05-Wrap-up.md)** 
+    * Recap of key learnings.
+    * Brief mention of alerting (out of scope for hands-on).
+    * Pointers for further exploration.
 
-1.  [Introduction to OpenShift Monitoring](./01-introduction/README.md)
-2.  [Enabling User-Defined Project Monitoring](./02-user-monitoring/README.md)
-3.  [Deploying Sample Applications](./03-sample-apps/README.md)
-4.  [Exploring Metrics in the OpenShift Console](./04-exploring-metrics/README.md)
-5.  [Exploring Dashboards](./05-dashboards/README.md)
-6.  [Understanding Alerts](./06-alerts/README.md)
-7.  [Best Practices & Further Exploration](./07-best-practices/README.md)
+**Important Notes:**
+
+* This workshop focuses on the **default, out-of-the-box monitoring capabilities** of ARO.
+* We will **not** be covering advanced customization of Prometheus, Grafana, or setting up alerting rules in detail.
+* Ensure your ARO cluster is healthy and accessible before starting.
 
 Let's get started!
